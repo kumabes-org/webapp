@@ -1,9 +1,6 @@
 name: "1. Java"
 
-on:
-  push:
-    branches:
-      - "feature**"
+on: push
 
 jobs:
   call-workflow-ci-java-gradle:
