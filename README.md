@@ -11,5 +11,3 @@ Contém um simples webapp executando com nodejs + express + ejs
 ## python
 
 Contém um simples webapp executando com python + flask
-
-d
