@@ -16,7 +16,8 @@
   "keywords": [
     "webapp",
     "kumabes-org",
-    "nodejs"
+    "nodejs",
+    "express"
   ],
   "author": "rotoku",
   "license": "ISC",
