@@ -4,6 +4,10 @@ updates:
     directory: "java/"
     schedule:
       interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "java/"
+    schedule:
+      interval: "daily"      
   - package-ecosystem: "npm"
     directory: "nodejs/"
     schedule:
