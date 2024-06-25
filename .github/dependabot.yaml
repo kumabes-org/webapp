@@ -7,7 +7,7 @@ updates:
   - package-ecosystem: "docker"
     directory: "java/"
     schedule:
-      interval: "daily"      
+      interval: "weekly"      
   - package-ecosystem: "npm"
     directory: "nodejs/"
     schedule:
