@@ -6,7 +6,7 @@ RUN addgroup -S spring && adduser -S spring -G spring
 
 USER spring:spring
 
-COPY build/libs/*SNAPSHOT.jar /app/app.jar
+COPY build/libs/*.jar /app/app.jar
 
 EXPOSE 8080
 
