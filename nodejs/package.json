@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/kumabes-org/webapp/issues"
   },
-  "homepage": "https://github.com/kumabes-org/webapp#readme"
+  "homepage": "https://github.com/kumabes-org/webapp#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
