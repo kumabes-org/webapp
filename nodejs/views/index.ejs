@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,15 +11,15 @@
       href="https://getbootstrap.com/docs/5.2/assets/css/docs.css"
       rel="stylesheet"
     />
-    <title>java - webapp</title>
+    <title>nodejs/express - webapp</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body class="p-3 m-0 border-0 bd-example">
-    <h1>Java - WebApp</h1>
+    <h1>NodeJS/Express - WebApp</h1>
     <ul>
-      <li th:text="${applicationVersion}">applicationVersion</li>
-      <li th:text="${hostAddress}">hostAddress</li>
-      <li th:text="${hostName}">hostName</li>
+      <li><%= applicationVersion %></li>
+      <li><%= hostAddress %></li>
+      <li><%= hostName %></li>
     </ul>
   </body>
 </html>
