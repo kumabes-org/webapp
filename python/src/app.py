@@ -18,4 +18,4 @@ def index():
     s.close()
     return render_template("index.html", titulo="python/flask - webapp", application_version=application_version, host_address=host_address, host_name=host_name)
 
-app.run(host="0.0.0.0")
+app.run(debug=True)

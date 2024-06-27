@@ -10,4 +10,4 @@ RUN pwd && \
 
 EXPOSE 5000
 
-CMD [ "python3", "src/app.py"]
+CMD [ "python3", "src/app.py", "-m", "flask", "run", "--host=0.0.0.0"]
