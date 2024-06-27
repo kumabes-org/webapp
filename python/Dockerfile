@@ -1,13 +1,6 @@
-FROM amazonlinux:2018.03.0.20231218.0
+FROM alpine:3.20.1
 
-# Install apt dependencies
-RUN yum install -y \
-    gcc gcc-c++ freetype-devel yum-utils findutils openssl-devel \
-    && yum update rpm -y \
-    && rm -rf /var/cache/yum/*
-
-RUN yum install python3 -y \
-    && rm -rf /var/cache/yum/*
+RUN apk --update add python3
 
 ENV PATH=$PATH:/root/.local/bin
 
