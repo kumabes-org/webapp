@@ -1,22 +1,9 @@
-FROM amazonlinux:latest
+FROM python:3.12.4-alpine3.20
 
-# Install apt dependencies
-RUN yum install -y \
-    gcc gcc-c++ freetype-devel yum-utils findutils openssl-devel \
-    && yum update rpm -y \
-    && rm -rf /var/cache/yum/*
+WORKDIR /python-docker
 
-RUN yum install python3 -y \
-    && rm -rf /var/cache/yum/*
+COPY . .
 
-ENV PATH=$PATH:/root/.local/bin
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-COPY . /src
-
-WORKDIR /src
-
-RUN pip3 install --user -r requirements*
-
-EXPOSE 5000
-
-CMD ["/bin/bash","-c","python3 app.py"]
+CMD [ "python3", "src/app.py", "-m", "flask", "run", "--host", "0.0.0.0"]
