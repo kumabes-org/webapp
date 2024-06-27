@@ -1,4 +1,4 @@
-FROM amazonlinux:latest
+FROM amazonlinux:2018.03.0.20231218.0
 
 # Install apt dependencies
 RUN yum install -y \
@@ -15,7 +15,7 @@ COPY . /src
 
 WORKDIR /src
 
-RUN pip3 install --user -r requirements*
+RUN pip3 install --user -r requirements.txt
 
 EXPOSE 5000
 
