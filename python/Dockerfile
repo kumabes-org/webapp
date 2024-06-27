@@ -1,6 +1,8 @@
 FROM alpine:3.20.1
 
-RUN apk --update add python3
+ENV PYTHONUNBUFFERED=1
+
+RUN apk add --update --no-cache python3
 
 ENV PATH=$PATH:/root/.local/bin
 
