@@ -10,8 +10,8 @@ COPY . /src
 
 WORKDIR /src
 
-RUN pip3 install  --no-cache-dir --user -r requirements.txt
+RUN pip3 install -r requirements.txt --no-cache-dir
 
 EXPOSE 5000
 
-CMD ["/bin/bash","-c","python3 app.py"]
+CMD ["python3", "app.py"]
