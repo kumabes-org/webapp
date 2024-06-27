@@ -1,17 +1,11 @@
-FROM alpine:3.20.1
+FROM python:3.12.4-alpine3.20
 
-ENV PYTHONUNBUFFERED=1
+WORKDIR /python-docker
 
-RUN apk add --update --no-cache python3=3.12.3-r1
+COPY requirements.txt requirements.txt
 
-ENV PATH=$PATH:/root/.local/bin
+RUN pip3 install -r requirements.txt
 
-COPY . /src
+COPY . .
 
-WORKDIR /src
-
-RUN pip3 install -r requirements.txt --no-cache-dir
-
-EXPOSE 5000
-
-CMD ["python3", "app.py"]
+CMD [ "python3", "src/app.py"]
